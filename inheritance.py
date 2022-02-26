@@ -11,9 +11,15 @@ class archer(warrior):
               f'\nЗдоровье у {target.__class__.__name__} понижено до {target.health}',
               f'\nСтрел у {self.__class__.__name__} стало {self.arrows}')
         print('-----------')
+    def introduces(self):
+        super().introduces()
+        print('-----------')
+        print(f'Arrows: {self.arrows}')
+        print('-----------')
+
 unit1 = archer()
 unit2 = warrior()
 
 unit1.attacs(unit2)
-print(unit1.__dict__)
 unit1.introduces()
+
